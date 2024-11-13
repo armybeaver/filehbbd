@@ -12,13 +12,14 @@ void build_border();
 void build_cat();
 void chat_box();
 void text_box_1();
-void dog_up();
+void frog_up();
 void timeautorun();
 void chat_box_2();
 void joke();
 void emoji_frog_and_cat();
 void birthdaytext();
 void canh_cut();
+void happy_text();
 void the_end();
 void gotoxy(int x, int y);
 
@@ -39,11 +40,12 @@ int main(){
     build_cat();
     chat_box();
     text_box_1();
-    dog_up();
+    frog_up();
     joke();
     chat_box_2();
     timeautorun();
     emoji_frog_and_cat();
+    birthdaytext();
     system("cls");
     canh_cut();
     gotoxy(75, 25); 
@@ -58,7 +60,7 @@ void introduce(){
     string receiver = "to:      Nguyen .........";
     gotoxy(69, 1);
 
-    for (char c : sender) // Range-based for loop for better readability
+    for (char c : sender) 
     {
         cout << c;
         Sleep(100);
@@ -156,7 +158,6 @@ void chat_box(){
 
     gotoxy(38, 21); cout << "\\ /";
 
-    // Top and bottom walls of the chat box
     for (int i = 1; i <= width_box; i++)
     {
         gotoxy(35 + i, 10); cout << "_"; // Top wall
@@ -175,7 +176,6 @@ void chat_box(){
         Sleep(5);
     }
 
-    // Side walls of the chat box
     for (int i = 1; i <= height_box; i++)
     {
         gotoxy(width_box + 35, 10 + i); cout << column_wall; // Right wall
@@ -191,7 +191,6 @@ void chat_box(){
     Sleep(2000);
 }
 
-// Display text box with options
 void text_box_1(){
     string text_box_11 = "Xin chao, hom nay co phai xin nhat cua ban khong nhow:v";
     string text_box_13 = "YES";
@@ -200,7 +199,6 @@ void text_box_1(){
 
     gotoxy(40, 12);
 
-    // Displaying the main text
     for (char c : text_box_11)
     {
         cout << c;
@@ -281,8 +279,8 @@ void text_box_1(){
     Sleep(600);
 }
 
-// Dog ASCII art animation
-void dog_up(){
+// frog ASCII art animation
+void frog_up(){
     short x = 117; 
     short y = 29;
 
@@ -301,7 +299,7 @@ void dog_up(){
 
 // Display a joke
 void joke(){
-    string text_box_12 = "Hoi vui HAPPYBIRTH_DAY hehe (')>:))";
+    string text_box_12 = "Hoi vui thoi HAPPYBIRTH_DAY hehe (')>:))";
     gotoxy(40, 13);
 
     for (char c : text_box_12)
@@ -380,29 +378,32 @@ void canh_cut(){
     UINT originalCP = GetConsoleOutputCP();
     SetConsoleOutputCP(CP_UTF8);
 
-    gotoxy(50, 5);cout<<"                            "; 
-    gotoxy(50, 6);cout<<"                            ░░▒▒▓██▓▓▒▒░░░   "; 
-    gotoxy(50, 7);cout<<"                        ░░▓███████████████▓░░   "; 
-    gotoxy(50, 8);cout<<"                      ░▒████████████████████▓░░  "; 
-    gotoxy(50, 9);cout<<"                     ▒██████▓▓▓▓▓▓▓▓▓███▓▓▓███▓░  "; 
-    gotoxy(50, 10);cout<<"                  ░▒███▓▒░░░░▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒██▓░ "; 
-    gotoxy(50, 11);cout<<"                  ░███▒░░░▒▒░░░░▓▓▓▓▓▓▓▒▒▒▒▒▒██▓ "; 
-    gotoxy(50, 12);cout<<"                  ▓██▒░░▓█▒▓█▒░░░▓▓▓▓▓▓▒▒▒▒▒▒▓██░  "; 
-    gotoxy(50, 13);cout<<"                 ░███▒░░█████▓░░░▓▓▓▓▓▓▓▒▒▒▒▒▒██▒ "; 
-    gotoxy(50, 14);cout<<"               ░░▒▓███░░▓████▒░░░░▓▓▓▓▓▓▒▒▒▒▒▓██▒     "; 
-    gotoxy(50, 15);cout<<"             ░▒▒▒▒▒▒███▒░░░░░░░░░░▓▓▓▓▓▓▓▒▒▒▓███▒ "; 
-    gotoxy(50, 16);cout<<"           ░▒▒▒▒▒▒▒▒▒███▒░░░░░░░░░▒▓▓▓▓▓█▓██████░  "; 
-    gotoxy(50, 17);cout<<"          ░▒▒▒▒▒▒▒▒▓▒██▓▒░░░░░░░░░▒▓▓███████████░   "; 
-    gotoxy(50, 18);cout<<"           ░▓▓▓▓▓▓▒▒▒▓▓██▒▒░░░░░░░░▒████████████░    ";
-    gotoxy(50, 19);cout<<"           ░░░░▒▓▓▓▓▓▓▓██▒▒▒▒▒▒░░░░▓██████████▓░  ";
-    gotoxy(50, 20);cout<<"                      ░▓▒▒▒▒▒▒▒▒▒▒▓████████▒░  ";
-    gotoxy(50, 21);cout<<"                      ░▒▒▒▒▒▒▒▒▓█████▓▒░   ";
-    gotoxy(50, 22);cout<<"                          ░░░░░░░░░   ";
+    gotoxy(50, 5);cout<<"                             ░░▒▒▓▓▒▒░░░"; 
+    gotoxy(50, 6);cout<<"                          ░░▒▒▓█████▓▓▒▒░░░   "; 
+    gotoxy(50, 7);cout<<"                      ░░▓██████████████████▓░░   "; 
+    gotoxy(50, 8);cout<<"                    ░▒████████████████████████▓░░  "; 
+    gotoxy(50, 9);cout<<"                   ▒██████▓▓▓▓▓▓▓▓▓███████▓▓▓███▓░  "; 
+    gotoxy(50, 10);cout<<"                ░▒███▓▒░░░░▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒██████▓░ "; 
+    gotoxy(50, 11);cout<<"                ░███▒░░░▒▒░░░░▓▓▓▓▓▓▓▒▒▒▒▒▒██████▓ "; 
+    gotoxy(50, 12);cout<<"                ▓██▒░░▓█▒▓█▒░░░▓▓▓▓▓▓▒▒▒▒▒▒▓██████░  "; 
+    gotoxy(50, 13);cout<<"               ░███▒░░█████▓░░░▓▓▓▓▓▓▓▒▒▒▒▒▒██████▒ "; 
+    gotoxy(50, 14);cout<<"             ░░▒▓███░░▓████▒░░░░▓▓▓▓▓▓▒▒▒▒▒▓██████▒     "; 
+    gotoxy(50, 15);cout<<"           ░▒▒▒▒▒▒███▒░░░░░░░░░░▓▓▓▓▓▓▓▒▒▒▓███████▒ "; 
+    gotoxy(50, 16);cout<<"         ░▒▒▒▒▒▒▒▒▒███▒░░░░░░░░░▒▓▓▓▓▓█▓██████████░  "; 
+    gotoxy(50, 17);cout<<"        ░▒▒▒▒▒▒▒▒▓▒██▓▒░░░░░░░░░▒▓▓███████████████░   "; 
+    gotoxy(50, 18);cout<<"         ░▓▓▓▓▓▓▒▒▒▓▓██▒▒░░░░░░░░▒████████████████░    ";
+    gotoxy(50, 19);cout<<"         ░░░░▒▓▓▓▓▓▓▓██▒▒▒▒▒▒░░░░▓██████████████▓░  ";
+    gotoxy(50, 20);cout<<"                    ░▓▒▒▒▒▒▒▒▒▒▒▓████████████▒░  ";
+    gotoxy(50, 21);cout<<"                    ░▒▒▒▒▒▒▒▒▓█████████▓▒░   ";
+    gotoxy(50, 22);cout<<"                        ░░░░░██████░░░░   ";
 
     SetConsoleOutputCP(originalCP);
 
 }
-
+void birthdaytext(){
+    gotoxy(50,11);cout<<""
+    return 0;
+}
 
 
 
