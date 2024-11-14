@@ -352,6 +352,16 @@ void timeautorun(){
     Sleep(50);
 }
 
+void birthdaytext(){
+    int x=50,y=20;
+    gotoxy(x,y);cout<<"  _     _      _   _          _                 ";Sleep(15);
+    gotoxy(x,y+1);cout<<" | |__ (_)_ __| |_| |__    __| | __ _ _   _ ___ ";Sleep(15);
+    gotoxy(x,y+2);cout<<" | '_\\| | '__ | __| '_\\ / _` |/  _` |||  / __|";Sleep(15);
+    gotoxy(x,y+3);cout<<" | |_) | | |||_| | | |(_|| (_| |  |_|  \\  __ \\";Sleep(15);
+    gotoxy(x,y+4);cout<<" |_.__/|_|_|   \\__|_| |_|\\__,_|\\__,_|\\__, |___/";Sleep(15);
+    gotoxy(x,y+5);cout<<"                                         |___/     ";Sleep(15);
+}
+
 void emoji_frog_and_cat(){
 
     UINT originalCP = GetConsoleOutputCP();
@@ -369,7 +379,7 @@ void emoji_frog_and_cat(){
 
     SetConsoleOutputCP(originalCP);
 
-    Sleep(5000);
+    Sleep(10);
     
 }
 
@@ -400,10 +410,7 @@ void canh_cut(){
     SetConsoleOutputCP(originalCP);
 
 }
-void birthdaytext(){
-    gotoxy(50,11);cout<<""
-    return 0;
-}
+
 
 
 
