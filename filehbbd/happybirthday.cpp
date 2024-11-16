@@ -21,7 +21,9 @@ void birthdaytext();
 void canh_cut();
 void happy_text();
 void simpsons();
+void fire_works();
 void cakebirthday();
+void pac_man();
 void the_end();
 void gotoxy(int x, int y);
 
@@ -49,7 +51,9 @@ int main(){
     emoji_frog_and_cat();
     birthdaytext();
     cakebirthday();
+    fire_works();
     simpsons();
+    pac_man();
     system("cls");
     canh_cut();
     gotoxy(75, 25); 
@@ -199,7 +203,7 @@ void text_box_1(){
     string text_box_11 ="Xin chao, hom nay co phai xin nhat cua ban khong?:v";
     string text_box_13 ="YES";
     string text_box_14 ="YEP";
-    string text_box_15 ="Hmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm.";
+    string text_box_15 ="Hmmmmmmmmmmmmmmmmmmmmmmmmmmmm.";
 
     gotoxy(40, 12);
 
@@ -303,7 +307,7 @@ void frog_up(){
 
 // Display a joke
 void joke(){
-    string text_box_12 = "Happy birthday chi Nam  (')>:))";
+    string text_box_12 = "Happy birthday to chi Nam   :)";
     gotoxy(40, 13);
 
     for (char c : text_box_12)
@@ -328,7 +332,7 @@ void chat_box_2(){
 }
 
 void timeautorun(){
-    int d = 6,m=6;
+    int d = 6,m=8;
     int r,i=1;
 
     short x = 119; 
@@ -357,13 +361,13 @@ void timeautorun(){
 }
 
 void birthdaytext(){
-    int x=50,y=22;
-    gotoxy(x,y);cout<<" _     _      _   _         _                ";Sleep(50);
-    gotoxy(x,y+1);cout<<"| |__ (_)_ __| |_| |__   __| | __ _ _   _ ___ ";Sleep(50);
-    gotoxy(x,y+2);cout<<"| '_ \\| | '__| __| '_ \\ / _` |/ _` | | | / __|";Sleep(50);
-    gotoxy(x,y+3);cout<<"| |_) | | |  | |_| | | | (_| | (_| | |_| \\__ \\";Sleep(50);
-    gotoxy(x,y+4);cout<<"|_.__/|_|_|   \\__|_| |_|\\__,_|\\__,_|\\__, |___/";Sleep(50);
-    gotoxy(x,y+5);cout<<"                                    |___/     ";Sleep(50);
+    int x=39,y=14;
+    gotoxy(x,y);cout<<"            _     _      _   _         _                ";Sleep(50);
+    gotoxy(x,y+1);cout<<"           | |__ (_)_ __| |_| |__   __| | __ _ _   _ ___ ";Sleep(50);
+    gotoxy(x,y+2);cout<<"           | '_ \\| | '__| __| '_ \\ / _` |/ _` | | | / __|";Sleep(50);
+    gotoxy(x,y+3);cout<<"           | |_) | | |  | |_| | | | (_| | (_| | |_| \\__ \\";Sleep(50);
+    gotoxy(x,y+4);cout<<"           |_.__/|_|_|   \\__|_| |_|\\__,_|\\__,_|\\__, |___/";Sleep(50);
+    gotoxy(x,y+5);cout<<"                                               |___/     ";Sleep(50);
     
 
 
@@ -418,9 +422,9 @@ void simpsons(){
     for (int i=0; i<=happy.length();i++){
         gotoxy(x-20+i+15,y+5);
         cout<<happy[i];
-        Sleep(25);
+        Sleep(40);
     }
-    Sleep(5000);
+    Sleep(500);
 }
 
 void cakebirthday(){
@@ -437,6 +441,74 @@ void cakebirthday(){
     gotoxy(x-20,y+11);cout<<" =_     -=:.___:_____|___.: =-     _=";Sleep(200);
     gotoxy(x-20,y+12);cout<<"   - . _ __ ___  ___  ___ __ _ . -";Sleep(200);
     Sleep(1000);
+    
+}
+
+
+
+void fire_works(){
+    int x = 63,y =19;
+    gotoxy(x-20,y+2);cout<<"                                   .''.       ";Sleep(200);
+    gotoxy(x-20,y+3);cout<<"       .''.      .        *''*    :_\\/_:     . ";Sleep(200);
+    gotoxy(x-20,y+4);cout<<"      :_\\/_:   _\\(/_  .:.*_\\/_*   : /\\ :  .'.:.'.";Sleep(200);
+    gotoxy(x-20,y+5);cout<<" .''.: /\\ :   ./)\\   ':'* /\\ * :  '..'.  -=:o:=-";Sleep(200);
+    gotoxy(x-20,y+6);cout<<":_\\/_:'.:::.    ' *''*    * '.\'/.' _\\(/_'.':'.'";Sleep(200);
+    gotoxy(x-20,y+7);cout<<": /\\ : :::::     *_\\/_*     -= o =-  /)\\    '  *";Sleep(200);
+    gotoxy(x-20,y+8);cout<<" '..'  ':::'     * /\\ *     .'/.\\'.   '";Sleep(200);
+    gotoxy(x-20,y+9);cout<<"     *            *..*         :";Sleep(200);
+    
+}
+
+void pac_man(){
+    int x = 55 ,y = 3;
+    gotoxy(x-20,y+2);cout<<" .-.   .-.     .--.                         ";Sleep(200);
+    gotoxy(x-20,y+3);cout<<"| OO| | OO|   / _.-' .-.   .-.  .-.   .''.    END";Sleep(200);
+    gotoxy(x-20,y+4);cout<<"|   | |   |   \\  '-. '-'   '-'  '-'   '..'";Sleep(200);
+    gotoxy(x-20,y+5);cout<<"'^^^' '^^^'    '--'                       ";Sleep(200);
+    gotoxy(x-20,y+2);cout<<"       .-.   .-.     .--.                   ";
+    gotoxy(x-20,y+3);cout<<"      | OO| | OO|   / _.-' .-.  .-.   .''.    END";
+    gotoxy(x-20,y+4);cout<<"      |   | |   |   \\  '-. '-'  '-'   '..'";
+    gotoxy(x-20,y+5);cout<<"      '^^^' '^^^'    '--'                  ";Sleep(900);
+    gotoxy(x-20,y+2);cout<<"            .-.   .-.     .--.              ";
+    gotoxy(x-20,y+3);cout<<"           | OO| | OO|   / _.-' .-.   .''.    END";
+    gotoxy(x-20,y+4);cout<<"           |   | |   |   \\  '-. '-'   '..'" ;
+    gotoxy(x-20,y+5);cout<<"           '^^^' '^^^'    '--'              ";Sleep(700);
+    gotoxy(x-20,y+2);cout<<"                 .-.   .-.     .--.              ";
+    gotoxy(x-20,y+3);cout<<"                | OO| | OO|   / _.-'  .''.    END";
+    gotoxy(x-20,y+4);cout<<"                |   | |   |   \\  '-.  '..'" ;
+    gotoxy(x-20,y+5);cout<<"                '^^^' '^^^'    '--'              ";Sleep(700);
+    gotoxy(x-20,y+2);cout<<"                       .-.   .-.     .--.              ";
+    gotoxy(x-20,y+3);cout<<"                      | OO| | OO|   / _.-'      END";
+    gotoxy(x-20,y+4);cout<<"                      |   | |   |   \\  '-.  " ;
+    gotoxy(x-20,y+5);cout<<"                       '^^^' '^^^'    '--'              ";Sleep(450);
+    gotoxy(x-16,y+2);cout<<"                       .-.   .-.     .--.              ";
+    gotoxy(x-16,y+3);cout<<"                      | OO| | OO|   / _.-'      END";
+    gotoxy(x-16,y+4);cout<<"                      |   | |   |   \\  '-.  " ;
+    gotoxy(x-16,y+5);cout<<"                       '^^^' '^^^'    '--'              ";Sleep(450);
+    gotoxy(x-12,y+2);cout<<"                       .-.   .-.     .--.              ";
+    gotoxy(x-12,y+3);cout<<"                      | OO| | OO|   / _.-'      END";
+    gotoxy(x-12,y+4);cout<<"                      |   | |   |   \\  '-.  " ;
+    gotoxy(x-12,y+5);cout<<"                       '^^^' '^^^'    '--'              ";Sleep(450);
+    gotoxy(x-8,y+2);cout<<"                       .-.   .-.     .--.              ";
+    gotoxy(x-8,y+3);cout<<"                      | OO| | OO|   / _.-'      END";
+    gotoxy(x-8,y+4);cout<<"                      |   | |   |   \\  '-.  " ;
+    gotoxy(x-8,y+5);cout<<"                       '^^^' '^^^'    '--'              ";Sleep(450);
+    gotoxy(x-4,y+2);cout<<"                       .-.   .-.     .--.              ";
+    gotoxy(x-4,y+3);cout<<"                      | OO| | OO|   / _.-'      END";
+    gotoxy(x-4,y+4);cout<<"                      |   | |   |   \\  '-.  " ;
+    gotoxy(x-4,y+5);cout<<"                       '^^^' '^^^'    '--'              ";Sleep(450);
+    gotoxy(x,y+2);cout<<"                       .-.   .-.     .--.              ";
+    gotoxy(x,y+3);cout<<"                      | OO| | OO|   / _.-'      END";
+    gotoxy(x,y+4);cout<<"                      |   | |   |   \\  '-.  " ;
+    gotoxy(x,y+5);cout<<"                       '^^^' '^^^'    '--'              ";Sleep(450);
+    gotoxy(x,y+2);cout<<"                               .-.   .-.     .--.              ";
+    gotoxy(x,y+3);cout<<"                              | OO| | OO|   / _.-'      ";
+    gotoxy(x,y+4);cout<<"                              |   | |   |   \\  '-.  " ;
+    gotoxy(x,y+5);cout<<"                              '^^^' '^^^'    '--'              ";Sleep(350);
+    gotoxy(x,y+2);cout<<"                               .-.   .-.     .--.              ";
+    gotoxy(x,y+3);cout<<"                              | OO| | OO|   / _o-'  goodbye";
+    gotoxy(x,y+4);cout<<"                              |   | |   |   \\  '-.  " ;
+    gotoxy(x,y+5);cout<<"                              '^^^' '^^^'    '--'              ";Sleep(650);
     
 }
 
@@ -460,9 +532,6 @@ void emoji_frog_and_cat(){
     Sleep(10);
     
 }
-
-
-
 
 
 
