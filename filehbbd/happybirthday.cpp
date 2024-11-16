@@ -20,6 +20,8 @@ void emoji_frog_and_cat();
 void birthdaytext();
 void canh_cut();
 void happy_text();
+void simpsons();
+void cakebirthday();
 void the_end();
 void gotoxy(int x, int y);
 
@@ -46,18 +48,20 @@ int main(){
     timeautorun();
     emoji_frog_and_cat();
     birthdaytext();
+    cakebirthday();
+    simpsons();
     system("cls");
     canh_cut();
     gotoxy(75, 25); 
     cout << "---The end---";
-    Sleep(10000); // Wait for 10 seconds before closing
+    Sleep(20000); // Wait for 10 seconds before closing
     return 0;
 }
 
 // Introduce sender and receiver
 void introduce(){
     string sender = "from:    Nguyen Duc Hoang";
-    string receiver = "to:      Nguyen .........";
+    string receiver = "to:      Phan Ngan Ha (Nam)";
     gotoxy(69, 1);
 
     for (char c : sender) 
@@ -192,17 +196,17 @@ void chat_box(){
 }
 
 void text_box_1(){
-    string text_box_11 = "Xin chao, hom nay co phai xin nhat cua ban khong nhow:v";
-    string text_box_13 = "YES";
-    string text_box_14 = "NO";
-    string text_box_15 = "Chon di?";
+    string text_box_11 ="Xin chao, hom nay co phai xin nhat cua ban khong?:v";
+    string text_box_13 ="YES";
+    string text_box_14 ="YEP";
+    string text_box_15 ="Hmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm.";
 
     gotoxy(40, 12);
 
     for (char c : text_box_11)
     {
         cout << c;
-        Sleep(25);
+        Sleep(50);
     }
     Sleep(2000);
 
@@ -221,13 +225,13 @@ void text_box_1(){
     {
         gotoxy(38 + i, 16); cout << row_wall; // Top wall
         gotoxy(width_box - i + 39, 18); cout << row_wall; // Bottom wall
-        Sleep(25);
+        Sleep(35);
     }
     for (int i = 1; i <= height_box; i++)
     {
         gotoxy(width_box + 38, 15 + i); cout << column_wall; // Right wall
         gotoxy(39, 18 - i); cout << column_wall; // Left wall
-        Sleep(25);
+        Sleep(35);
     }
     // Corners for YES box
     gotoxy(39, 16); cout << fold_up_left;
@@ -240,13 +244,13 @@ void text_box_1(){
     {
         gotoxy(50 + i, 16); cout << row_wall; // Top wall
         gotoxy(width_box - i + 51, 18); cout << row_wall; // Bottom wall
-        Sleep(25);
+        Sleep(35);
     }
     for (int i = 1; i <= height_box; i++)
     {
         gotoxy(width_box + 50, 15 + i); cout << column_wall; // Right wall
         gotoxy(51, 18 - i); cout << column_wall; // Left wall
-        Sleep(25);
+        Sleep(35);
     }
     // Corners for NO box
     gotoxy(51, 16); cout << fold_up_left;
@@ -259,21 +263,21 @@ void text_box_1(){
     for (char c : text_box_13)
     {
         cout << c;
-        Sleep(25);
+        Sleep(35);
     }
 
     gotoxy(53, 17);
     for (char c : text_box_14)
     {
         cout << c;
-        Sleep(25);
+        Sleep(35);
     }
 
     gotoxy(40, 13);
     for (char c : text_box_15)
     {
         cout << c;
-        Sleep(25);
+        Sleep(35);
     }
 
     Sleep(600);
@@ -281,7 +285,7 @@ void text_box_1(){
 
 // frog ASCII art animation
 void frog_up(){
-    short x = 117; 
+    short x = 122; 
     short y = 29;
 
     string d0 = "   @..@";
@@ -299,7 +303,7 @@ void frog_up(){
 
 // Display a joke
 void joke(){
-    string text_box_12 = "Hoi vui thoi HAPPYBIRTH_DAY hehe (')>:))";
+    string text_box_12 = "Happy birthday chi Nam  (')>:))";
     gotoxy(40, 13);
 
     for (char c : text_box_12)
@@ -311,7 +315,7 @@ void joke(){
 }
 
 void chat_box_2(){
-    short x = 113; 
+    short x = 118; 
     short y = 28;
 
     gotoxy(x-2, y-11);cout<<"  ======     ======"; Sleep(50);
@@ -324,24 +328,24 @@ void chat_box_2(){
 }
 
 void timeautorun(){
-    int d = 0,m=0;
+    int d = 6,m=6;
     int r,i=1;
 
-    short x = 114; 
-    short y = 29;
+    short x = 119; 
+    short y = 28;
 
     while(i <= 960)
     {
         r++;
         i++;
-        gotoxy(x+3, y-9);cout<<d<<"/"<<m<<"/"<<i+1045;
+        gotoxy(x+3, y-9);cout<<d<<"/"<<m<<"/"<<i+1043;
         if (r%94==0)
         {
-           d++; Sleep(50);
+           d++; Sleep(100);
         }
         if (r%300==0)
         {
-            m++; Sleep(50);
+            m++; Sleep(100);
         }
         if (i>=980)
         {
@@ -353,34 +357,16 @@ void timeautorun(){
 }
 
 void birthdaytext(){
-    int x=50,y=20;
-    gotoxy(x,y);cout<<"  _     _      _   _          _                 ";Sleep(15);
-    gotoxy(x,y+1);cout<<" | |__ (_)_ __| |_| |__    __| | __ _ _   _ ___ ";Sleep(15);
-    gotoxy(x,y+2);cout<<" | '_\\| | '__ | __| '_\\ / _` |/  _` |||  / __|";Sleep(15);
-    gotoxy(x,y+3);cout<<" | |_) | | |||_| | | |(_|| (_| |  |_|  \\  __ \\";Sleep(15);
-    gotoxy(x,y+4);cout<<" |_.__/|_|_|   \\__|_| |_|\\__,_|\\__,_|\\__, |___/";Sleep(15);
-    gotoxy(x,y+5);cout<<"                                         |___/     ";Sleep(15);
-}
-
-void emoji_frog_and_cat(){
-
-    UINT originalCP = GetConsoleOutputCP();
-    SetConsoleOutputCP(CP_UTF8); 
+    int x=50,y=22;
+    gotoxy(x,y);cout<<" _     _      _   _         _                ";Sleep(50);
+    gotoxy(x,y+1);cout<<"| |__ (_)_ __| |_| |__   __| | __ _ _   _ ___ ";Sleep(50);
+    gotoxy(x,y+2);cout<<"| '_ \\| | '__| __| '_ \\ / _` |/ _` | | | / __|";Sleep(50);
+    gotoxy(x,y+3);cout<<"| |_) | | |  | |_| | | | (_| | (_| | |_| \\__ \\";Sleep(50);
+    gotoxy(x,y+4);cout<<"|_.__/|_|_|   \\__|_| |_|\\__,_|\\__,_|\\__, |___/";Sleep(50);
+    gotoxy(x,y+5);cout<<"                                    |___/     ";Sleep(50);
     
-    short x = 117; 
-    short y = 29;
 
-    gotoxy(x+3, y - 4); cout <<"^--^";Sleep(10);
-    gotoxy(x+3, y - 3); cout << "-0-";Sleep(10);
 
-    gotoxy(6, 21); cout << "        ／＞////フ"; Sleep(10);
-    gotoxy(6, 22); cout << "        | 　^　^|"; Sleep(10);
-    gotoxy(6, 23); cout << "      ／` ミ＿0ノ"; Sleep(10);
-
-    SetConsoleOutputCP(originalCP);
-
-    Sleep(10);
-    
 }
 
 void canh_cut(){
@@ -411,6 +397,69 @@ void canh_cut(){
 
 }
 
+
+void simpsons(){
+    int x=31, y=6;
+    gotoxy(x-20,y+1);cout<<" |\\/\\/\\/\\/\\/|";Sleep(50);
+    gotoxy(x-20,y+2);cout<<" |          |";Sleep(50);
+    gotoxy(x-20,y+3);cout<<" |    __  __|";Sleep(50);
+    gotoxy(x-20,y+4);cout<<" |   /  \\/  \\";Sleep(50);
+    gotoxy(x-20,y+5);cout<<" |  (o   )o  ) ";Sleep(50);
+    gotoxy(x-20,y+6);cout<<" /c  \\__/ --.";Sleep(50);
+    gotoxy(x-20,y+7);cout<<" \\_   ,     -'";Sleep(50);
+    gotoxy(x-20,y+8);cout<<"  |  '\\_______)";Sleep(50);
+    gotoxy(x-20,y+9);cout<<"  |      _)";Sleep(50);
+    gotoxy(x-20,y+10);cout<<"  |      |";Sleep(50);
+    gotoxy(x-20,y+11);cout<<" /`-----'\\";Sleep(50);
+    gotoxy(x-20,y+12);cout<<"/_________\\";Sleep(50);
+    Sleep(1000);
+    
+    string happy = "----------|---------------------------> Happybirthday";
+    for (int i=0; i<=happy.length();i++){
+        gotoxy(x-20+i+15,y+5);
+        cout<<happy[i];
+        Sleep(25);
+    }
+    Sleep(5000);
+}
+
+void cakebirthday(){
+    int x = 130, y = 3;
+    gotoxy(x-20,y+2);cout<<"            ,   ,   ,   ,";Sleep(200);
+    gotoxy(x-20,y+3);cout<<"          , |_,_|_,_|_,_| ,";Sleep(200);
+    gotoxy(x-20,y+4);cout<<"      _,-=|;  |,  |,  |,  |;=-_";Sleep(200);
+    gotoxy(x-20,y+5);cout<<"     .-_| , | , | , | , | , |  _-.";Sleep(200);
+    gotoxy(x-20,y+6);cout<<"     |:  -|:._|___|___|__.|:=-  :|";Sleep(200);
+    gotoxy(x-20,y+7);cout<<"     ||*:  :    .     .    :  |*||";Sleep(200);
+    gotoxy(x-20,y+8);cout<<"     || |  | *  |  *  |  * |  | ||";Sleep(200);
+    gotoxy(x-20,y+9);cout<<" _.-=|:*|  |    |     |    |  |*:|=-._";Sleep(200);
+    gotoxy(x-20,y+10);cout<<"-   `._:  | *  |  *  |  * |  :_.'    -";Sleep(200);
+    gotoxy(x-20,y+11);cout<<" =_     -=:.___:_____|___.: =-     _=";Sleep(200);
+    gotoxy(x-20,y+12);cout<<"   - . _ __ ___  ___  ___ __ _ . -";Sleep(200);
+    Sleep(1000);
+    
+}
+
+void emoji_frog_and_cat(){
+
+    UINT originalCP = GetConsoleOutputCP();
+    SetConsoleOutputCP(CP_UTF8); 
+    
+    short x = 122; 
+    short y = 29;
+
+    gotoxy(x+3, y - 4); cout <<"^--^";Sleep(10);
+    gotoxy(x+3, y - 3); cout << "-0-";Sleep(10);
+
+    gotoxy(6, 21); cout << "        ／＞////フ"; Sleep(10);
+    gotoxy(6, 22); cout << "        | 　^　^|"; Sleep(10);
+    gotoxy(6, 23); cout << "      ／` ミ＿0ノ"; Sleep(10);
+
+    SetConsoleOutputCP(originalCP);
+
+    Sleep(10);
+    
+}
 
 
 
