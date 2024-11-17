@@ -455,8 +455,7 @@ void fire_works(){
     gotoxy(x-20,y+6);cout<<":_\\/_:'.:::.    ' *''*    * '.\'/.' _\\(/_'.':'.'";Sleep(200);
     gotoxy(x-20,y+7);cout<<": /\\ : :::::     *_\\/_*     -= o =-  /)\\    '  *";Sleep(200);
     gotoxy(x-20,y+8);cout<<" '..'  ':::'     * /\\ *     .'/.\\'.   '";Sleep(200);
-    gotoxy(x-20,y+9);cout<<"     *            *..*         :";Sleep(200);
-    
+    gotoxy(x-20,y+9);cout<<"     *            *..*         :";Sleep(250);
 }
 
 void pac_man(){
