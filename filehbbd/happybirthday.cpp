@@ -45,11 +45,11 @@ int main(){
     chat_box();
     text_box_1();
     frog_up();
-    joke();
     chat_box_2();
     timeautorun();
     emoji_frog_and_cat();
     birthdaytext();
+    joke();
     cakebirthday();
     fire_works();
     simpsons();
@@ -65,7 +65,7 @@ int main(){
 // Introduce sender and receiver
 void introduce(){
     string sender = "from:    Nguyen Duc Hoang";
-    string receiver = "to:      Phan Ngan Ha (Nam)";
+    string receiver = "to:      Dang Sy Tung (Tung beng)";
     gotoxy(69, 1);
 
     for (char c : sender) 
@@ -139,13 +139,13 @@ void build_cat(){
         Sleep(100);
     }
     Sleep(50);
-    gotoxy(6, 29); cout << "＼二二二二二二二二二二二二二二二＿)"; Sleep(50); 
+    gotoxy(6, 29); cout << "＼二二二二二二二二二二二二二二二＿)"; Sleep(75); 
 
     // Drawing the legs
     for (int i = 0; i < 7; i++)
     {
-        gotoxy(38, 28 - i); cout << "/ \\"; Sleep(50);
-        gotoxy(38, 28 - i); cout << "| |"; Sleep(50);
+        gotoxy(38, 28 - i); cout << "/ \\"; Sleep(75);
+        gotoxy(38, 28 - i); cout << "| |"; Sleep(75);
     }
     Sleep(30);
 
@@ -169,19 +169,19 @@ void chat_box(){
     for (int i = 1; i <= width_box; i++)
     {
         gotoxy(35 + i, 10); cout << "_"; // Top wall
-        Sleep(10);
+        Sleep(25);
     }
 
     for (int i = 1; i <= 67; i++)
     {
         gotoxy(37 + i, 9); cout << "_"; // Top wall
-        Sleep(0);
+        Sleep(25);
     }
     
     for (int i = 1; i <= 65; i++)
     {
         gotoxy(40+i, 20); cout << "_"; // Bottom wall
-        Sleep(5);
+        Sleep(25);
     }
 
     for (int i = 1; i <= height_box; i++)
@@ -199,93 +199,7 @@ void chat_box(){
     Sleep(2000);
 }
 
-void text_box_1(){
-    string text_box_11 ="Xin chao, hom nay co phai xin nhat cua ban khong?:v";
-    string text_box_13 ="YES";
-    string text_box_14 ="YEP";
-    string text_box_15 ="Hmmmmmmmmmmmmmmmmmmmmmmmmmmmm.";
 
-    gotoxy(40, 12);
-
-    for (char c : text_box_11)
-    {
-        cout << c;
-        Sleep(50);
-    }
-    Sleep(2000);
-
-    const int width_box = 10;
-    const int height_box = 2;
-
-    char row_wall = 205;          
-    char column_wall = 186;      
-    char fold_up_left = 201;      
-    char fold_up_right = 187;     
-    char fold_down_left = 200;    
-    char fold_down_right = 188;   
-
-    // Yes box
-    for (int i = 1; i <= width_box; i++)
-    {
-        gotoxy(38 + i, 16); cout << row_wall; // Top wall
-        gotoxy(width_box - i + 39, 18); cout << row_wall; // Bottom wall
-        Sleep(35);
-    }
-    for (int i = 1; i <= height_box; i++)
-    {
-        gotoxy(width_box + 38, 15 + i); cout << column_wall; // Right wall
-        gotoxy(39, 18 - i); cout << column_wall; // Left wall
-        Sleep(35);
-    }
-    // Corners for YES box
-    gotoxy(39, 16); cout << fold_up_left;
-    gotoxy(38 + width_box, 16); cout << fold_up_right;
-    gotoxy(38 + width_box, 18); cout << fold_down_right;
-    gotoxy(39, 18); cout << fold_down_left;
-
-    // NO box
-    for (int i = 1; i <= width_box; i++)
-    {
-        gotoxy(50 + i, 16); cout << row_wall; // Top wall
-        gotoxy(width_box - i + 51, 18); cout << row_wall; // Bottom wall
-        Sleep(35);
-    }
-    for (int i = 1; i <= height_box; i++)
-    {
-        gotoxy(width_box + 50, 15 + i); cout << column_wall; // Right wall
-        gotoxy(51, 18 - i); cout << column_wall; // Left wall
-        Sleep(35);
-    }
-    // Corners for NO box
-    gotoxy(51, 16); cout << fold_up_left;
-    gotoxy(50 + width_box, 16); cout << fold_up_right;
-    gotoxy(50 + width_box, 18); cout << fold_down_right;
-    gotoxy(51, 18); cout << fold_down_left;
-
-    // Display the options
-    gotoxy(41, 17);
-    for (char c : text_box_13)
-    {
-        cout << c;
-        Sleep(35);
-    }
-
-    gotoxy(53, 17);
-    for (char c : text_box_14)
-    {
-        cout << c;
-        Sleep(35);
-    }
-
-    gotoxy(40, 13);
-    for (char c : text_box_15)
-    {
-        cout << c;
-        Sleep(35);
-    }
-
-    Sleep(600);
-}
 
 // frog ASCII art animation
 void frog_up(){
@@ -307,13 +221,13 @@ void frog_up(){
 
 // Display a joke
 void joke(){
-    string text_box_12 = "Happy birthday to chi Nam   :)";
+    string text_box_12 = "Dua thoi sinh nhat nha thg em vv:))";
     gotoxy(40, 13);
 
     for (char c : text_box_12)
     {
         cout << c;
-        Sleep(25);
+        Sleep(50);
     }
     Sleep(2000);
 }
@@ -332,7 +246,7 @@ void chat_box_2(){
 }
 
 void timeautorun(){
-    int d = 6,m=8;
+    int d = 8,m=8;
     int r,i=1;
 
     short x = 119; 
@@ -342,7 +256,7 @@ void timeautorun(){
     {
         r++;
         i++;
-        gotoxy(x+3, y-9);cout<<d<<"/"<<m<<"/"<<i+1043;
+        gotoxy(x+3, y-9);cout<<d<<"/"<<m<<"/"<<i+1045;
         if (r%94==0)
         {
            d++; Sleep(100);
@@ -353,11 +267,11 @@ void timeautorun(){
         }
         if (i>=980)
         {
-            Sleep(100);
+            Sleep(200);
         }
     }
 
-    Sleep(50);
+    Sleep(100);
 }
 
 void birthdaytext(){
@@ -368,7 +282,7 @@ void birthdaytext(){
     gotoxy(x,y+3);cout<<"           | |_) | | |  | |_| | | | (_| | (_| | |_| \\__ \\";Sleep(50);
     gotoxy(x,y+4);cout<<"           |_.__/|_|_|   \\__|_| |_|\\__,_|\\__,_|\\__, |___/";Sleep(50);
     gotoxy(x,y+5);cout<<"                                               |___/     ";Sleep(50);
-    
+    Sleep(200);
 
 
 }
@@ -528,11 +442,97 @@ void emoji_frog_and_cat(){
 
     SetConsoleOutputCP(originalCP);
 
-    Sleep(10);
+    Sleep(100);
     
 }
 
+void text_box_1(){
+    string text_box_11 ="E, hom ni sinh nhat m ak?:v";
+    string text_box_13 ="Co'";
+    string text_box_14 ="Ko'";
+    string text_box_15 ="Hmmmmmmmmmmmmmmmmmmmmmmmmmmmmm.";
 
+    gotoxy(40, 12);
+
+    for (char c : text_box_11)
+    {
+        cout << c;
+        Sleep(50);
+    }
+    Sleep(2000);
+
+    const int width_box = 10;
+    const int height_box = 2;
+
+    char row_wall = 205;          
+    char column_wall = 186;      
+    char fold_up_left = 201;      
+    char fold_up_right = 187;     
+    char fold_down_left = 200;    
+    char fold_down_right = 188;   
+
+    // Yes box
+    for (int i = 1; i <= width_box; i++)
+    {
+        gotoxy(38 + i, 16); cout << row_wall; // Top wall
+        gotoxy(width_box - i + 39, 18); cout << row_wall; // Bottom wall
+        Sleep(50);
+    }
+    for (int i = 1; i <= height_box; i++)
+    {
+        gotoxy(width_box + 38, 15 + i); cout << column_wall; // Right wall
+        gotoxy(39, 18 - i); cout << column_wall; // Left wall
+        Sleep(50);
+    }
+    // Corners for YES box
+    gotoxy(39, 16); cout << fold_up_left;
+    gotoxy(38 + width_box, 16); cout << fold_up_right;
+    gotoxy(38 + width_box, 18); cout << fold_down_right;
+    gotoxy(39, 18); cout << fold_down_left;
+
+    // NO box
+    for (int i = 1; i <= width_box; i++)
+    {
+        gotoxy(50 + i, 16); cout << row_wall; // Top wall
+        gotoxy(width_box - i + 51, 18); cout << row_wall; // Bottom wall
+        Sleep(50);
+    }
+    for (int i = 1; i <= height_box; i++)
+    {
+        gotoxy(width_box + 50, 15 + i); cout << column_wall; // Right wall
+        gotoxy(51, 18 - i); cout << column_wall; // Left wall
+        Sleep(50);
+    }
+    // Corners for NO box
+    gotoxy(51, 16); cout << fold_up_left;
+    gotoxy(50 + width_box, 16); cout << fold_up_right;
+    gotoxy(50 + width_box, 18); cout << fold_down_right;
+    gotoxy(51, 18); cout << fold_down_left;
+
+    // Display the options
+    gotoxy(41, 17);
+    for (char c : text_box_13)
+    {
+        cout << c;
+        Sleep(50);
+    }
+
+    gotoxy(53, 17);
+    for (char c : text_box_14)
+    {
+        cout << c;
+        Sleep(50);
+    }
+
+    gotoxy(40, 13);
+    for (char c : text_box_15)
+    {
+        cout << c;
+        Sleep(50);
+    }
+
+    Sleep(600);
+}
 
 
 
